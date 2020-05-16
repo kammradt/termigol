@@ -1,7 +1,7 @@
 <h1 align="center">Welcome to Termigol 💻</h1>
 
 <div align="center">
-    <img src="images/Termigol.png" alt="The go Gopher">
+    <img src="images/Termigol.png" alt="The go Gopher"  width=500">
 </div> 
 
 ***

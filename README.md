@@ -4,8 +4,29 @@
 <div align="center">  
     <img src="images/Termigol.png" alt="The go Gopher"  width=500">  
 </div>   
-  
-  
+
+<div align="center">
+    <a href="https://github.com/kammradt/termigol/stargazers">
+        <img src="https://img.shields.io/github/stars/kammradt/termigol.svg?style=for-the-badge" />
+    </a>
+    <a href="https://github.com/kammradt/termigol/issues">
+        <img src="https://img.shields.io/github/issues/kammradt/termigol.svg?style=for-the-badge" />
+    </a>
+</div>
+
+<div align="center">
+  <img src="https://forthebadge.com/images/badges/you-didnt-ask-for-this.svg" />
+</div>
+
+<div align="center">
+    <img src="https://forthebadge.com/images/badges/built-with-love.svg" />
+
+  <a href="https://golang.org/">
+    <img src="https://forthebadge.com/images/badges/made-with-go.svg" />
+  </a>
+</div>
+    
+
 ## Description 📝  
   
 I really enjoy learning new stuff, and the easiest path for me is by doing a project.    
@@ -15,45 +36,10 @@ I was curious about [Golang](https://golang.org/) and how to use it, so I decide
   
 ## Goals 🗺️   
   
-<details><summary>Commands</summary>
-  
-<p>
+How can verify my ideias on issues page  :blush:  
+<br>
+[![GitHub issues](https://img.shields.io/github/issues/Naereen/StrapDown.js.svg)](https://GitHub.com/kammradt/TERMIGOL/issues/)
 
-  * [x] ls
-  * [x] exit
-  * [ ] help
-  * [ ] cat
-  * [ ] pwd
-  * [ ] echo
-  * [ ] ping
-  * [ ] date
-  * [ ] mv
-  * [ ] cp
-
-</p>
-
-</details>
-
-<details><summary>Structure</summary>
-  
-<p>
-
-* [ ]  Have beautiful output colors  
-* [ ]  Be able to handle options such `ls -l`  
-
-* Handle commands as just string is not a really good ideia. Maybe we can create a custom `struct` that will handle the command, options, flags, content, etc.  
-  
-* Being able to perform commands such as `cat file.txt | grep "text"` or `cp file.txt file-bkp.txt && echo "done"`  
-  
-* Create a graphical interface
-
-</p>
-
-</details>
-
-  
-
-  
 ## How to use :pencil2:  
   
 ```go run termigol.go```  

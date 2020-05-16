@@ -13,9 +13,10 @@ const CouldNotGetCurrentPathCode int = 2
 const CouldNotReadCurrentPathCode int = 3
 
 func main() {
-	command := readCommand()
-	commandExecutionHandler(command)
-	main()
+	for {
+		command := readCommand()
+		commandExecutionHandler(command)
+	}
 }
 
 func readCommand() string {

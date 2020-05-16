@@ -39,7 +39,17 @@ I was curious about [Golang](https://golang.org/) and how to use it, so I decide
 
 <details>
   <summary>5.0 - Control and redirection</summary>
-  <p>Being able to perform commands such as `cat file.txt | grep "text"` or `cp file.txt file-bkp.txt && echo "done"`>
+  <p>Being able to perform commands such as `cat file.txt | grep "text"` or `cp file.txt file-bkp.txt && echo "done"` </p>
+</details>
+
+<details>
+  <summary>5.0 - Control and redirection</summary>
+  <p>Being able to perform commands such as `cat file.txt | grep "text"` or `cp file.txt file-bkp.txt && echo "done"` </p>
+</details>
+
+<details>
+  <summary>X.0 - Graphic interface</summary>
+  <p> I do not have any ideia how to do this</p>
 </details>
 
 ## How to use :pencil2:

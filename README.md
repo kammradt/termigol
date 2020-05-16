@@ -37,8 +37,6 @@ I was curious about [Golang](https://golang.org/) and how to use it, so I decide
 ## Goals 🗺️   
   
 How can verify my ideias on issues page  :blush:  
-<br>
-[![GitHub issues](https://img.shields.io/github/issues/Naereen/StrapDown.js.svg)](https://GitHub.com/kammradt/TERMIGOL/issues/)
 
 ## How to use :pencil2:  
   

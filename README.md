@@ -1,9 +1,4 @@
 <h1 align="center">Welcome to Termigol 💻</h1>
-<p>
-  <a href="https://twitter.com/kammzinho" target="_blank">
-    <img alt="Twitter: kammzinho" src="https://img.shields.io/twitter/follow/kammzinho.svg?style=social" />
-  </a>
-</p>
 
 <div align="center">
     <img src="images/Termigol.png" alt="The go Gopher">
@@ -13,11 +8,17 @@
 
 > A bad terminal-kinda project written in Go
 
+
+
 ## Description 📝
 
-**What ❓**
+I really enjoy learning new stuff, and the easiest path for me is by doing a project.  
+I was curious about [Golang](https://golang.org/) and how to use it, so I decided to create a simple terminal emulator.  
+> This project does not want in any way be a product, the-best-solution nor compete with any other similar project, this is just a the result of a learning process :stuck_out_tongue:
 
-**Why ❓**
+## How to use :pencil2:
+
+```go run termigol.go```
 
 ## Author
 

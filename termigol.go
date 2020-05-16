@@ -8,10 +8,6 @@ import (
 	"strings"
 )
 
-const ExitedWithSuccessCode int = 1
-const CouldNotGetCurrentPathCode int = 2
-const CouldNotReadCurrentPathCode int = 3
-
 const LS string = "ls"
 const EXIT string = "exit"
 const HELP string = "help"
@@ -36,7 +32,7 @@ func readCommand() string {
 func commandExecutionHandler(command string) {
 	switch command {
 	case EXIT:
-		exitHandler(ExitedWithSuccessCode)
+		exitHandler()
 	case HELP:
 		handleHelp()
 	case LS:
@@ -47,27 +43,20 @@ func commandExecutionHandler(command string) {
 	fmt.Println("")
 }
 
-func exitHandler(errorCode int) {
+func exitHandler() {
 	ExitedWithSuccessMessage := "Exiting..."
-	CouldNotGetCurrentPathMessage := "Could not get current path."
-	CouldNotReadCurrentPathMessage := "Could not read current path."
-
-	switch errorCode {
-	case ExitedWithSuccessCode:
-		fmt.Println(ExitedWithSuccessMessage)
-	case CouldNotGetCurrentPathCode:
-		fmt.Println(CouldNotGetCurrentPathMessage)
-	case CouldNotReadCurrentPathCode:
-		fmt.Println(CouldNotReadCurrentPathMessage)
-	}
-
-	os.Exit(errorCode)
+	fmt.Println(ExitedWithSuccessMessage)
+	const ExitedWithSuccessCode int = 1
+	os.Exit(ExitedWithSuccessCode)
 }
 
 func getCurrentPath() string {
 	path, err := os.Getwd()
 	if err != nil {
-		exitHandler(CouldNotGetCurrentPathCode)
+		CouldNotGetCurrentPathMessage := "Could not get current path."
+		fmt.Println(CouldNotGetCurrentPathMessage)
+		const CouldNotGetCurrentPathCode int = 2
+		os.Exit(CouldNotGetCurrentPathCode)
 	}
 	return path
 }
@@ -75,7 +64,10 @@ func getCurrentPath() string {
 func handleLs() {
 	files, err := ioutil.ReadDir("./")
 	if err != nil {
-		exitHandler(CouldNotReadCurrentPathCode)
+		CouldNotReadCurrentPathMessage := "Could not read current path."
+		fmt.Println(CouldNotReadCurrentPathMessage)
+		const CouldNotReadCurrentPathCode int = 3
+		os.Exit(CouldNotReadCurrentPathCode)
 	}
 
 	for _, f := range files {

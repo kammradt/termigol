@@ -12,6 +12,10 @@ const ExitedWithSuccessCode int = 1
 const CouldNotGetCurrentPathCode int = 2
 const CouldNotReadCurrentPathCode int = 3
 
+const LS string = "ls"
+const EXIT string = "exit"
+const HELP string = "help"
+
 func main() {
 	for {
 		command := readCommand()
@@ -31,11 +35,11 @@ func readCommand() string {
 
 func commandExecutionHandler(command string) {
 	switch command {
-	case "exit":
+	case EXIT:
 		exitHandler(ExitedWithSuccessCode)
-	case "help":
+	case HELP:
 		handleHelp()
-	case "ls":
+	case LS:
 		handleLs()
 	default:
 		handleCommandNotFound()
@@ -83,7 +87,7 @@ func handleHelp() {
 	fmt.Println("Hi there!")
 	fmt.Println("At this moment, we have these commands: ")
 
-	availableCommands := [3]string{"ls", "exit", "help"}
+	availableCommands := [3]string{LS, EXIT, HELP}
 	for _, command := range availableCommands {
 		fmt.Println("> $", command)
 	}

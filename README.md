@@ -14,42 +14,34 @@ I was curious about [Golang](https://golang.org/) and how to use it, so I decide
 
 ## Goals 🗺️ 
 
-<details>
-  <summary>1.0 - First steps</summary>
-  <p>Be able to use these commands: ls, cat, pwd, echo</p>
-  <p>Have beautiful output colors</p>
-</details>
 
-<details>
-  <summary>2.0 - More commands</summary>
-  <p>Be able to use these commands: ping, date, mv, cp</p>
-</details>
+<details><summary>1.0 - First steps</summary>
 
-<details>
-  <summary>3.0 - Flags</summary>
-  <p>Be able to handle options such: </p>
-  <p>`ls -l`</p>
-  <p>`someCommand --verbose`</p>
-</details>
+* [ ]  Be able to use these commands: ls, cat, pwd, echo
+* [ ]  Have beautiful output colors
 
-<details>
-  <summary>4.0 - Command structure</summary>
-  <p>Handle commands as just string is not a really good ideia. Maybe we can create a custom `struct` that will handle the command, options, flags, content, etc.</p>
-</details>
+</details><details><summary>2.0 - More commands</summary>
 
-<details>
-  <summary>5.0 - Control and redirection</summary>
-  <p>Being able to perform commands such as `cat file.txt | grep "text"` or `cp file.txt file-bkp.txt && echo "done"` </p>
-</details>
+* [ ]  Be able to use these commands: ping, date, mv, cp
 
-<details>
-  <summary>5.0 - Control and redirection</summary>
-  <p>Being able to perform commands such as `cat file.txt | grep "text"` or `cp file.txt file-bkp.txt && echo "done"` </p>
-</details>
+</details><details><summary>3.0 - Flags</summary>
 
-<details>
-  <summary>X.0 - Graphic interface</summary>
-  <p> I do not have any ideia how to do this</p>
+Be able to handle options such:
+*  [ ]  `ls -l`
+*  [ ] `someCommand --verbose`
+
+</details><details><summary>4.0 - Command structure</summary>
+
+*   Handle commands as just string is not a really good ideia. Maybe we can create a custom `struct` that will handle the command, options, flags, content, etc.
+
+</details><details><summary>5.0 - Control and redirection</summary>
+
+*   Being able to perform commands such as `cat file.txt | grep "text"` or `cp file.txt file-bkp.txt && echo "done"`
+
+</details><details><summary>X.0 - Graphic interface</summary>
+
+*   I do not have any ideia how to do this
+
 </details>
 
 ## How to use :pencil2:

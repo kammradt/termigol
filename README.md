@@ -4,11 +4,6 @@
     <img src="images/Termigol.png" alt="The go Gopher"  width=500">
 </div> 
 
-***
-
-> A bad terminal-kinda project written in Go
-
-
 
 ## Description 📝
 

@@ -11,6 +11,7 @@ import (
 const LS string = "ls"
 const EXIT string = "exit"
 const HELP string = "help"
+const PWD string = "pwd"
 
 func main() {
 	for {
@@ -37,6 +38,8 @@ func commandExecutionHandler(command string) {
 		handleHelp()
 	case LS:
 		handleLs()
+	case PWD:
+		fmt.Println(getCurrentPath())
 	default:
 		handleCommandNotFound()
 	}

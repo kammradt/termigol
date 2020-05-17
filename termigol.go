@@ -12,6 +12,7 @@ const EXIT string = "exit"
 const HELP string = "help"
 const LS string = "ls"
 const PWD string = "pwd"
+const CAT string = "cat"
 
 func main() {
 	for {
@@ -31,6 +32,8 @@ func readCommand() string {
 }
 
 func commandExecutionHandler(command string) {
+	commands := strings.Fields(command)
+	command = commands[0]
 	switch command {
 	case EXIT:
 		exitHandler()
@@ -40,10 +43,25 @@ func commandExecutionHandler(command string) {
 		handleLs()
 	case PWD:
 		fmt.Println(getCurrentPath())
+	case CAT:
+		handleCat(commands)
 	default:
 		handleCommandNotFound()
 	}
 	fmt.Println("")
+}
+
+func handleCat(commands []string) {
+	fileName := commands[1]
+
+	byteContent, err := ioutil.ReadFile(fileName)
+	if err != nil {
+		CouldNotReadFileMessage := "Could not read " + fileName + "file."
+		fmt.Println(CouldNotReadFileMessage)
+	}
+
+	text := string(byteContent)
+	fmt.Println(text)
 }
 
 func exitHandler() {

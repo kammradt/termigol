@@ -72,7 +72,7 @@ func handleCat(commands []string) {
 
 	byteContent, err := ioutil.ReadFile(fileName)
 	if err != nil {
-		CouldNotReadFileMessage := "Could not read " + fileName + "file."
+		CouldNotReadFileMessage := fmt.Sprintf("Could not read %s file", fileName)
 		fmt.Println(CouldNotReadFileMessage)
 	}
 

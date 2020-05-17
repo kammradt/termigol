@@ -13,6 +13,7 @@ const HELP string = "help"
 const LS string = "ls"
 const PWD string = "pwd"
 const CAT string = "cat"
+const ECHO string = "echo"
 
 func main() {
 	for {
@@ -45,10 +46,21 @@ func commandExecutionHandler(command string) {
 		fmt.Println(getCurrentPath())
 	case CAT:
 		handleCat(commands)
+	case ECHO:
+		handleEcho(commands)
 	default:
 		handleCommandNotFound()
 	}
 	fmt.Println("")
+}
+
+func handleEcho(command []string) {
+	if len(command) < 2 {
+		fmt.Println("You need to give a second argumento to 'echo' command")
+		return
+	}
+	content := command[1]
+	fmt.Println(content)
 }
 
 func handleCat(commands []string) {
@@ -100,7 +112,7 @@ func handleHelp() {
 	fmt.Println("Hi there!")
 	fmt.Println("At this moment, we have these commands: ")
 
-	availableCommands := [5]string{EXIT,HELP,LS,PWD,CAT}
+	availableCommands := [6]string{EXIT, HELP, LS, PWD, CAT, ECHO}
 	for _, command := range availableCommands {
 		fmt.Println("> $", command)
 	}

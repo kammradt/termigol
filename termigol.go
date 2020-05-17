@@ -100,7 +100,7 @@ func handleHelp() {
 	fmt.Println("Hi there!")
 	fmt.Println("At this moment, we have these commands: ")
 
-	availableCommands := [3]string{LS, EXIT, HELP}
+	availableCommands := [5]string{EXIT,HELP,LS,PWD,CAT}
 	for _, command := range availableCommands {
 		fmt.Println("> $", command)
 	}

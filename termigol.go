@@ -54,16 +54,20 @@ func commandExecutionHandler(command string) {
 	fmt.Println("")
 }
 
-func handleEcho(command []string) {
-	if len(command) < 2 {
+func handleEcho(commands []string) {
+	if len(commands) < 2 {
 		fmt.Println("You need to give a second argumento to 'echo' command")
 		return
 	}
-	content := command[1]
+	content := commands[1]
 	fmt.Println(content)
 }
 
 func handleCat(commands []string) {
+	if len(commands) < 2 {
+		fmt.Println("You need to give a second argumento to 'cat' command")
+		return
+	}
 	fileName := commands[1]
 
 	byteContent, err := ioutil.ReadFile(fileName)

@@ -8,9 +8,9 @@ import (
 	"strings"
 )
 
-const LS string = "ls"
 const EXIT string = "exit"
 const HELP string = "help"
+const LS string = "ls"
 const PWD string = "pwd"
 
 func main() {

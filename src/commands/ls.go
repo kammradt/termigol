@@ -21,6 +21,11 @@ func ls(args []string) {
 	}
 
 	for _, f := range files {
+		if f.IsDir() {
+			fmt.Print("[d] ")
+		} else {
+			fmt.Print("[f] ")
+		}
 		fmt.Println(f.Name())
 	}
 }

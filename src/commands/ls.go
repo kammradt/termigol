@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"github.com/kyokomi/emoji"
 	"io/ioutil"
 	"os"
 )
@@ -12,7 +13,15 @@ func main() {
 }
 
 func ls(args []string) {
-	files, err := ioutil.ReadDir("./")
+
+	files := make([]os.FileInfo, 0)
+	var err error
+	if len(args) > 0 {
+		files, err = ioutil.ReadDir("./" + args[0])
+	} else {
+		files, err = ioutil.ReadDir("./")
+	}
+
 	if err != nil {
 		CouldNotReadCurrentPathMessage := "Could not read current path."
 		fmt.Println(CouldNotReadCurrentPathMessage)
@@ -22,9 +31,9 @@ func ls(args []string) {
 
 	for _, f := range files {
 		if f.IsDir() {
-			fmt.Print("[d] ")
+			_, _ = emoji.Print(":dividers: ")
 		} else {
-			fmt.Print("[f] ")
+			_, _ = emoji.Print(":memo: ")
 		}
 		fmt.Println(f.Name())
 	}

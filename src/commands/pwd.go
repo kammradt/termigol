@@ -1,7 +1,7 @@
 package main
 
 import (
-	"awesomeProject/src/common"
+	"../common"
 	"fmt"
 	"os"
 )

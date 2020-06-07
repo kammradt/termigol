@@ -40,7 +40,9 @@ How can verify my ideias on issues page  :blush:
 
 ## How to use :pencil2:  
   
-```go run termigol.go```  
+`./build.sh`
+
+> Make sure you have a `bin` folder inside your `~` directory  
   
 ## Author  
   
